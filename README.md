@@ -1,8 +1,8 @@
-﻿# Text Summarization
+# Text Summarization
 
-This Dataiku DSS plugin provides tools for automatic text summarization.
+This Dataiku DSS plugin provides a recipe to summarize text data.
 
-Documentation: https://www.dataiku.com/dss/plugins/info/text-summarization.html
+Documentation: https://www.dataiku.com/product/plugins/text-summarization/
 
 ### Licence
 This plugin is distributed under Apache License version 2.0
