@@ -1,4 +1,4 @@
-PLUGIN_VERSION=1.1.0
+PLUGIN_VERSION=1.1.1
 PLUGIN_ID=text-summarization
 
 plugin:
@@ -6,5 +6,3 @@ plugin:
 	rm -rf dist
 	mkdir dist
 	zip --exclude "*.pyc" -r dist/dss-plugin-${PLUGIN_ID}-${PLUGIN_VERSION}.zip plugin.json code-env custom-recipes
-
-include ../Makefile.inc
