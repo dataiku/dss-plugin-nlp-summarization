@@ -1,4 +1,4 @@
-PLUGIN_VERSION=1.1.1
+PLUGIN_VERSION=1.2.1
 PLUGIN_ID=text-summarization
 
 plugin:
