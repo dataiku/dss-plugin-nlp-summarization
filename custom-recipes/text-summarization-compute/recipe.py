@@ -1,19 +1,28 @@
 # -*- coding: utf-8 -*-
-
 from __future__ import absolute_import
 from __future__ import division, print_function, unicode_literals
 
-import dataiku
-from dataiku.customrecipe import *
-import numpy as np
+import os
 
+import dataiku
+from dataiku.customrecipe import (
+    get_input_names_for_role, 
+    get_output_names_for_role, 
+    get_recipe_config,
+)
+
+import nltk
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.nlp.stemmers import Stemmer
 from sumy.utils import get_stop_words
 
-import nltk
-nltk.download('punkt')
+# Get the cache directory defined in resources_init and make sure NLTK uses it
+# See below for why using NLTK_DATA is not possible
+# https://stackoverflow.com/questions/44857382/change-nltk-download-path-directory-from-default-ntlk-data/47082481#47082481
+cache_folder = os.getenv("NLTK_HOME")
+nltk.data.path.append(cache_folder)
+
 
 ##################################
 # Input data
