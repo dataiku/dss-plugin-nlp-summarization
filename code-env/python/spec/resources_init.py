@@ -6,7 +6,7 @@ import nltk
 from dataiku.code_env_resources import clear_all_env_vars
 from dataiku.code_env_resources import set_env_path
 
-######################## Download NLTK data #################################
+######################## Download NLTK data ###########################
 # Clear all environment variables defined by a previously run script
 clear_all_env_vars()
 
