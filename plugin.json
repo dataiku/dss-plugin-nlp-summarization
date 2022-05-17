@@ -1,8 +1,9 @@
 {
     "id": "text-summarization",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "meta": {
         "label": "Text Summarization",
+        "category": "Natural Language Processing",
         "description": "Summarize texts using extractive summarization methods (which means that the summary will be a number of extracted sentences from the original text).",
         "author": "Dataiku (Hicham El Boukkouri)",
         "icon": "icon-file-text",

@@ -69,7 +69,7 @@ def summarize(text):
             text = text.lower()
             all_capital = True
         
-        parser = PlaintextParser.from_string(text.decode(
+        parser = PlaintextParser.from_string(text.encode().decode(
             'ascii', errors='ignore'), Tokenizer(LANGUAGE))
         stemmer = Stemmer(LANGUAGE)
 
