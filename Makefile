@@ -1,5 +1,8 @@
-PLUGIN_VERSION=1.2.1
-PLUGIN_ID=text-summarization
+# Makefile variables set automatically
+
+plugin_id=`cat plugin.json | python -c "import sys, json; print(str(json.load(sys.stdin)['id']).replace('/',''))"`
+
+plugin_version=`cat plugin.json | python -c "import sys, json; print(str(json.load(sys.stdin)['version']).replace('/',''))"`
 
 plugin:
 	cat plugin.json|json_pp > /dev/null
