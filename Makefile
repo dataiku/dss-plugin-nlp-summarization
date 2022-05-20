@@ -52,4 +52,5 @@ tests: unit-tests integration-tests
 
 dist-clean:
 	rm -rf dist
+\n
 	
