@@ -15,6 +15,16 @@ from sumy.utils import get_stop_words
 import nltk
 nltk.download('punkt')
 
+
+##################################
+# Find python version
+##################################
+
+client = dataiku.api_client()
+plugin = client.get_plugin("text-summarization")
+CODE_ENV_NAME = plugin.get_settings().get_raw()['codeEnvName']
+PYTHON_VERSION = client.get_code_env("PYTHON", CODE_ENV_NAME).get_definition()['desc']['pythonInterpreter']
+
 ##################################
 # Input data
 ##################################
@@ -69,10 +79,15 @@ def summarize(text):
             text = text.lower()
             all_capital = True
         
-        parser = PlaintextParser.from_string(text.encode().decode(
-            'ascii', errors='ignore'), Tokenizer(LANGUAGE))
-        stemmer = Stemmer(LANGUAGE)
-
+        if PYTHON_VERSION == "PYTHON27":
+            parser = PlaintextParser.from_string(text.decode(
+                'ascii', errors='ignore'), Tokenizer(LANGUAGE))
+            stemmer = Stemmer(LANGUAGE)
+        else:
+            parser = PlaintextParser.from_string(text.encode().decode(
+                'ascii', errors='ignore'), Tokenizer(LANGUAGE))
+            stemmer = Stemmer(LANGUAGE)
+            
         summarizer = Summarizer(stemmer)
         summarizer.stop_words = get_stop_words(LANGUAGE)
 
