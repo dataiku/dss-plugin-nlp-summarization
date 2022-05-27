@@ -6,6 +6,7 @@ from __future__ import division, print_function, unicode_literals
 import dataiku
 from dataiku.customrecipe import *
 import numpy as np
+import sys
 
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
@@ -20,10 +21,8 @@ nltk.download('punkt')
 # Find python version
 ##################################
 
-client = dataiku.api_client()
-plugin = client.get_plugin("text-summarization")
-CODE_ENV_NAME = plugin.get_settings().get_raw()['codeEnvName']
-PYTHON_VERSION = client.get_code_env("PYTHON", CODE_ENV_NAME).get_definition()['desc']['pythonInterpreter']
+PY2 = sys.version_info[0] == 2
+PY3 = sys.version_info[0] == 3
 
 ##################################
 # Input data
@@ -79,14 +78,13 @@ def summarize(text):
             text = text.lower()
             all_capital = True
         
-        if PYTHON_VERSION == "PYTHON27":
+        if PY2:
             parser = PlaintextParser.from_string(text.decode(
                 'ascii', errors='ignore'), Tokenizer(LANGUAGE))
-            stemmer = Stemmer(LANGUAGE)
         else:
             parser = PlaintextParser.from_string(text.encode().decode(
                 'ascii', errors='ignore'), Tokenizer(LANGUAGE))
-            stemmer = Stemmer(LANGUAGE)
+        stemmer = Stemmer(LANGUAGE)
             
         summarizer = Summarizer(stemmer)
         summarizer.stop_words = get_stop_words(LANGUAGE)
