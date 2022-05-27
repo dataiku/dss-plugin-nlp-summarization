@@ -3,10 +3,9 @@ from __future__ import absolute_import
 from __future__ import division, print_function, unicode_literals
 
 import os
+import sys
 
 import dataiku
-import numpy as np
-import sys
 from dataiku.customrecipe import (
     get_input_names_for_role, 
     get_output_names_for_role, 
@@ -14,9 +13,9 @@ from dataiku.customrecipe import (
 )
 
 import nltk
-from sumy.parsers.plaintext import PlaintextParser
-from sumy.nlp.tokenizers import Tokenizer
 from sumy.nlp.stemmers import Stemmer
+from sumy.nlp.tokenizers import Tokenizer
+from sumy.parsers.plaintext import PlaintextParser
 from sumy.utils import get_stop_words
 
 # Get the cache directory defined in resources_init and make sure NLTK uses it

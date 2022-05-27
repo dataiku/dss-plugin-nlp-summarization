@@ -1,6 +1,6 @@
 {
     "id": "text-summarization",
-    "version": "1.2.2",
+    "version": "1.3.0",
     "meta": {
         "label": "Text Summarization",
         "category": "Natural Language Processing",
