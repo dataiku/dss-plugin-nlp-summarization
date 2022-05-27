@@ -94,7 +94,6 @@ def summarize(text):
             parser = PlaintextParser.from_string(text.encode().decode(
                 'ascii', errors='ignore'), Tokenizer(LANGUAGE))
         stemmer = Stemmer(LANGUAGE)
-            
         summarizer = Summarizer(stemmer)
         summarizer.stop_words = get_stop_words(LANGUAGE)
 
