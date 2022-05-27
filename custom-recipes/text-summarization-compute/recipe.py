@@ -3,6 +3,7 @@ from __future__ import absolute_import
 from __future__ import division, print_function, unicode_literals
 
 import os
+import sys
 
 import dataiku
 from dataiku.customrecipe import (
@@ -12,9 +13,9 @@ from dataiku.customrecipe import (
 )
 
 import nltk
-from sumy.parsers.plaintext import PlaintextParser
-from sumy.nlp.tokenizers import Tokenizer
 from sumy.nlp.stemmers import Stemmer
+from sumy.nlp.tokenizers import Tokenizer
+from sumy.parsers.plaintext import PlaintextParser
 from sumy.utils import get_stop_words
 
 # Get the cache directory defined in resources_init and make sure NLTK uses it
@@ -22,6 +23,14 @@ from sumy.utils import get_stop_words
 # https://stackoverflow.com/questions/44857382/change-nltk-download-path-directory-from-default-ntlk-data/47082481#47082481
 cache_folder = os.getenv("NLTK_HOME")
 nltk.data.path.append(cache_folder)
+
+
+
+##################################
+# Find python version
+##################################
+
+PY2 = sys.version_info[0] == 2
 
 
 ##################################
@@ -78,10 +87,13 @@ def summarize(text):
             text = text.lower()
             all_capital = True
         
-        parser = PlaintextParser.from_string(text.decode(
-            'ascii', errors='ignore'), Tokenizer(LANGUAGE))
+        if PY2:
+            parser = PlaintextParser.from_string(text.decode(
+                'ascii', errors='ignore'), Tokenizer(LANGUAGE))
+        else:
+            parser = PlaintextParser.from_string(text.encode().decode(
+                'ascii', errors='ignore'), Tokenizer(LANGUAGE))
         stemmer = Stemmer(LANGUAGE)
-
         summarizer = Summarizer(stemmer)
         summarizer.stop_words = get_stop_words(LANGUAGE)
 
