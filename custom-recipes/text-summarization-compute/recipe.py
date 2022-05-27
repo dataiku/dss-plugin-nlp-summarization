@@ -31,7 +31,6 @@ nltk.data.path.append(cache_folder)
 ##################################
 
 PY2 = sys.version_info[0] == 2
-PY3 = sys.version_info[0] == 3
 
 ##################################
 # Input data
