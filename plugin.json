@@ -8,6 +8,7 @@
         "author": "Dataiku (Hicham El Boukkouri)",
         "icon": "icon-file-text",
         "licenseInfo": "Apache Software License",
+        "supportLevel": "NOT_SUPPORTED",
         "url": "https://www.dataiku.com/dss/plugins/info/text-summarization.html",
         "tags": ["NLP", "Machine Learning"]
     }
