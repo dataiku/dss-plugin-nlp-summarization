@@ -4,7 +4,7 @@
     "meta": {
         "label": "Text Summarization",
         "category": "Natural Language Processing",
-        "description": "Summarize texts using extractive summarization methods (which means that the summary will be a number of extracted sentences from the original text).",
+        "description": "Summarize texts using extractive summarization methods (which means that the summary will be a number of extracted sentences from the original text). ⚠️ This plugin is now \"deprecated\", we recommend using the [Generative AI](https://doc.dataiku.com/dss/latest/generative-ai/index.html) feature.",
         "author": "Dataiku (Hicham El Boukkouri)",
         "icon": "icon-file-text",
         "licenseInfo": "Apache Software License",
