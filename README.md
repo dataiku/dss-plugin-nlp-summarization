@@ -1,6 +1,6 @@
 ﻿# Text Summarization
 
-⚠️ This plugin is now "deprecated", we recommend using the [Generative AI](https://doc.dataiku.com/dss/latest/generative-ai/index.html) feature.
+⚠️ Dataiku strongly recommends to rather use the native [Generative AI](https://doc.dataiku.com/dss/latest/generative-ai/index.html) features, which mostly supersede this plugin.
 
 This Dataiku DSS plugin provides tools for automatic text summarization.
 
