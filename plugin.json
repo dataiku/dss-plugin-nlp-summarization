@@ -3,13 +3,13 @@
     "version": "1.4.1",
     "meta": {
         "label": "Text Summarization",
-        "category": "Natural Language Processing",
+        "category": "NLP",
         "description": "Summarize texts using extractive summarization methods (which means that the summary will be a number of extracted sentences from the original text). ⚠️ ️ Dataiku strongly recommends to rather use the native [Generative AI](https://doc.dataiku.com/dss/latest/generative-ai/index.html) features, which mostly supersede this plugin.",
         "author": "Dataiku (Hicham El Boukkouri)",
         "icon": "icon-file-text",
         "licenseInfo": "Apache Software License",
         "supportLevel": "NOT_SUPPORTED",
         "url": "https://www.dataiku.com/dss/plugins/info/text-summarization.html",
-        "tags": ["NLP", "Machine Learning"]
+        "tags": ["NLP", "Unstructured Data"]
     }
 }
