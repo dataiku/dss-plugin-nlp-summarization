@@ -1,6 +1,10 @@
 # Changelog
 
-## [Version 1.4.0](https://github.com/dataiku/dss-plugin-nlp-summarization/releases/tag/v1.4.0) - Python compatibility - 2023-04
+## [Version 1.4.0](https://github.com/dataiku/dss-plugin-nlp-summarization/releases/tag/v1.4.1) - 2025-12
+
+- Updated warning
+
+- ## [Version 1.4.0](https://github.com/dataiku/dss-plugin-nlp-summarization/releases/tag/v1.4.0) - Python compatibility - 2023-04
 
 - ✨ Added support for Python versions 3.8, 3.9, 3.10, 3.11
 
