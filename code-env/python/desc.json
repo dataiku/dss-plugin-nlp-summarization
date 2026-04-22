@@ -1,12 +1,10 @@
 {
   "acceptedPythonInterpreters": [
-    "PYTHON27",
-    "PYTHON36",
-    "PYTHON37",
     "PYTHON38",
     "PYTHON39",
     "PYTHON310",
-    "PYTHON311"
+    "PYTHON311",
+    "PYTHON312"
   ],
   "forceConda": false,
   "installCorePackages": true,
