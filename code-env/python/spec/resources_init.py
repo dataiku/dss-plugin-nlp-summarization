@@ -13,4 +13,4 @@ clear_all_env_vars()
 # Download punkt resources to the NLTK_HOME cache directory
 set_env_path("NLTK_HOME", "nltk_data")
 cache_folder = os.getenv("NLTK_HOME")
-nltk.download('punkt', download_dir=cache_folder)
+nltk.download('punkt_tab', download_dir=cache_folder)
