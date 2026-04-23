@@ -4,7 +4,9 @@
     "PYTHON39",
     "PYTHON310",
     "PYTHON311",
-    "PYTHON312"
+    "PYTHON312",
+    "PYTHON313",
+    "PYTHON314"
   ],
   "forceConda": false,
   "installCorePackages": true,
