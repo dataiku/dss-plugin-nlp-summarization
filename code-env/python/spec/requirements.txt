@@ -1,6 +1,6 @@
 nltk==3.9.1; python_version == '3.8'
 nltk==3.9.2; python_version == '3.9'
-nltk==3.9.4; python_version >= '3.10'
+nltk==3.10.0; python_version >= '3.10'
 packaging; python_version >= '3.12'
 sumy==0.8.1; python_version < '3.8'
 sumy==0.11.0; python_version >= '3.8'
